@@ -17,7 +17,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/YOURNAME/publish-packages/game
+          images: ghcr.io/Maria-Leiliane/publish-packages/game
           tags: type=sha
       - name: Login to GHCR
         uses: docker/login-action@v3
@@ -31,3 +31,4 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
+
